@@ -10,7 +10,8 @@ int main()
     scanf("%d%d%d", &a, &b, &c);  
   
     //function call biggest(a, b, c)  
-    printf("Biggest of %d, %d and %d is %d\n", a, b, c, biggest(a, b, c));  
+    printf("Biggest of %d, %d and %d is %d\n", a, b, c, 
+    biggest(a, b, c));  
   
     return 0;  
 }  
@@ -22,11 +23,11 @@ int biggest(int x, int y, int z)
     {  
        return x;  
     }  
-    else  
-    {  
-       if(y > z)  
-          return y;  
+    else if(y > z)
+ {  
+       
+          return y;  }
        else  
-          return z;  
-    }  
-return 0;
+  { return z; } 
+return 0;}
+ 
