@@ -43,9 +43,11 @@ int main()
 {
 int ch, flag;
 char s1[100], s2[100];
-input_two_strings(&s1, &s2);
+input_two_strings(s1, s2);
 flag = stringcompare(&s1, &s2);
 output(&s1, &s2,flag);
 return 0;
 }
 
+45
+  

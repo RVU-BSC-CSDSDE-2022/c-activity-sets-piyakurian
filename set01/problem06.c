@@ -1,33 +1,31 @@
-#include<stdio.h>  
+#include <stdio.h>
+void input(int *a, int *b, int *c)
+{
   
-int biggest(int, int, int); // function prototype  
-  
-int main()  
-{  
-    int a, b, c;  
-  
-    printf("Enter 3 integer numbers\n");  
-    scanf("%d%d%d", &a, &b, &c);  
-  
-    //function call biggest(a, b, c)  
-    printf("Biggest of %d, %d and %d is %d\n", a, b, c, 
-    biggest(a, b, c));  
-  
-    return 0;  
-}  
-  
-// function definition  
-int biggest(int x, int y, int z)  
-{  
-    if(x > y && x > z)  
-    {  
-       return x;  
-    }  
-    else if(y > z)
- {  
-       
-          return y;  }
-       else  
-  { return z; } 
-return 0;}
- 
+  printf("Enter the 3 numbers\n");
+  scanf("%d %d %d",a,b,c);
+}
+int largest(int a,int b,int c)
+{
+  if(a>b && a>c)
+  {
+    return a;
+    }
+  else if(b>a && b>c)
+  {
+    return b;
+    }
+  else 
+  {
+    return c;
+    }
+}
+
+int main()
+{
+  int e,f,g,h;
+  input(&e,&f,&g);
+  h = largest(e,f,g);
+  printf("Largest number amongst %d ,%d and %d is %d",e,f,g,h);
+   return 0;
+}

@@ -6,7 +6,7 @@ int input()
   scanf("%d",&a);
   return a;
   }
-int largest(int a,int b, int c)
+int comapre(int a,int b, int c)
 {
 if (a>b && a>c)
    return a;
@@ -17,11 +17,11 @@ if (a>b && a>c)
   }
 int main()
 {
-  int e,f,g,h;
+  int e,f,g;
   e = input();
   f = input();
   g = input();
-  h = largest(e,f,g);
+  largest = compare(e,f,g);
   printf("the largest of %d,%d is %d\n",e,f,g);
   return 0;
 }
