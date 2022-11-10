@@ -1,21 +1,48 @@
 #include <stdio.h>
 #include <math.h>
-int main(){
-    int num1, num2, x1, x2, y1, y2;
-    float distance;
-    
-    // Asking for input
-    printf("Enter the X and Y Coordinates of First Point: ");
-    scanf("%d %d", &x1, &y1);
-    printf("Enter the X and Y Coordinates of Second Point: ");
-    scanf("%d %d", &x2, &y2);
-    
-    // Calculating the distance
-    num1 = x2 - x1;
-    num2 = y2 - y1;
-    distance = sqrt((num1 * num1) + (num2 * num2));
-    
-    // Displaying output
-    printf("Distance: %.2f", distance);
-    return 0;
+struct_point
+{
+  float x;
+  float y;
+};
+typedef struct_point Point;
+
+Point input()
+{
+  Point a;
+  printf("Enter the x co-ordinates of the point\n");
+  scanf("%f",&a.x)
+  printf("Enter the y co-ordinates of the point\n");
+  scanf("%f",&a.y)
+  return a;
 }
+
+float dist(Point e,Point f)
+{
+  float res1,res2;
+  float distance p,q,r;
+  res1=f.x-e.x;
+  res2=f.y-e.y;
+  p=pow(res1,2);
+  q=pow(res2,2);
+  r=p+q;
+  distance=sqrt(r);
+
+  return distance;
+    
+}
+
+void output(Point a, Point b,float distance)
+{
+ printf("The distance between Point %f,%f and Point %f,%f is %f",a.x,a.y,b.x,b.y,distance);
+}
+int main()
+{
+Point e,f;
+float g;
+e=input();
+f=input();
+g=dist(e,f);
+output(e,f,g);
+}
+
