@@ -22,7 +22,5 @@ int main()
   total_weight=camel_weight+truck_weight;
   printf("the total weight of the truck: %d",total_weight);
   return 0;
-  
-  
-  
+
 }
