@@ -4,7 +4,7 @@ int main()
   char s[50];
   printf("Enter the name of the camel\n");
   scanf("%s",&s);
-  int i=0;
+  int i=0; 
   int len=strlen(s);
   int vowel_count=0;
   int cons_count=0;
@@ -12,11 +12,11 @@ int main()
     {
       if(s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u'||s[i]=='A'||s[i]=='E'||s[i]=='I'||s[i]=='O'||s[i]=='U')
       {
-        vowel_count=vowel_count+1;
+       vowel_count=vowel_count+1;
       }
       else
       {
-        cons_count=cons_count+1;
+       cons_count=cons_count+1;
       }
       i++;
       }
