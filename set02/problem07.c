@@ -1,28 +1,46 @@
+
 #include<stdio.h>
-int main()
+void input(char *name);
+int has_nice_name(char *c);
+void output(int res);
+  
+int  main()
 {
-  char s[50];
-  printf("Enter the name of the camel\n");
-  scanf("%s",&s);
-  int i=0; 
-  int len=strlen(s);
-  int vowel_count=0;
-  int cons_count=0;
-  while(i<len)
+  char name[100];
+  int res=0;
+  input(name);
+  res=has_nice_name(name);
+  output(res);
+}
+
+  
+void input(char *name);
+{
+  printf("Enter the name of the camel\n")
+  scanf("%s", name);
+}
+
+int has_nice_name(char *c)
+{
+  int i=0; count1=0, count2=0,flag=0;
+  for(i=0;c[i]!='\0';i++)
     {
-      if(s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u'||s[i]=='A'||s[i]=='E'||s[i]=='I'||s[i]=='O'||s[i]=='U')
-      {
-       vowel_count=vowel_count+1;
+if(c[i]=='a'||c[i]=='e'||c[i]=='i'||c[i]=='o'||c[i]=='u'||c[i]=='A'||c[i]=='E'||c[i]=='I'||c[i]=='O'||c[i]=='U')
+    }
+   {
+      count1++;
       }
       else
-      {
-       cons_count=cons_count+1;
-      }
-      i++;
-      }
-    if(vowel_count>=2&& cons_count>=2)
+      count2++;
+      if(count1=2 && count2=2)
+      return flag=1;
+  }
+      return flag;
+
+    void output(int res)
     {
       printf("The camel has a very nice name");
     }
   return 0;
   }
+}

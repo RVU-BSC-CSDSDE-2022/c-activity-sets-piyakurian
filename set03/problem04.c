@@ -1,4 +1,4 @@
-#include <studio.h>
+#include <stdio.h>
 int input_array_size();
 void input_array(int n, int a[n]);
 int sum_composite_numbers(int n, int a[n]);
@@ -26,7 +26,7 @@ int is_composite(int n)
   for (int i=3;i<n;i++)
     {
       if(n %i == 0)
-        return 1
+        return 1;
     }
     return 0;
 }
