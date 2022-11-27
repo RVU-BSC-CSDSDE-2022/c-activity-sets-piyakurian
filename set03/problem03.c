@@ -5,7 +5,7 @@ void output(int n, int result);
 
 int input_number()
 {
-  int n;
+  int n; 
   printf("Enter a number\n");
   scanf("%d",&n);
   return n;
