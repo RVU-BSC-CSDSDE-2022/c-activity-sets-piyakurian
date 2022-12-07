@@ -1,6 +1,8 @@
 #include<stdio.h>
 #include<string.h>
-void input_string(char* a, char* b){
+void input_string(char* a, char* b
+){
+  printf("Enter a string variable\n")
     scanf("%s",a);
     scanf("%s",b);
 }
